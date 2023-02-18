@@ -1,0 +1,21 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+.showTxtBtnMmsk {
+    display: inline;
+}
+
+.showTxtWeb{
+    display: inline;
+}
+
+@media (max-width: 600px) {
+    .showTxtBtnMmsk {
+        display: none;
+    }
+
+    .showTxtWeb{
+        display: none;
+    }
+}

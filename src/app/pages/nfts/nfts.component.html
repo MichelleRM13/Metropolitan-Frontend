@@ -1,0 +1,14 @@
+<div fxLayout="row wrap" fxLayoutAlign="center center" style="width: 100%;" fxFlex="100">
+    <div fxLayoutAlign="center center" fxFlex="90" fxFlex.lt-xl="90" fxFlex.lt-md="90" fxFlex.lt-sm="90" style="margin-left: 10px;margin-top: 20px;">
+        <button mat-raised-button color="primary" (click)="actualizarNFTs()" type="button">
+            <mat-icon>credit_card</mat-icon>
+            Actualizar lista de Nfts
+        </button>
+    </div>
+
+    <div fxLayout="row wrap" fxLayoutAlign="space-evenly center" fxFlex="100" fxFlex.lt-xl="100" style="width: 100%; margin-top: 20px;">
+        <div *ngFor="let nft of UrlImagenes" style="margin-top: 3vh;" fxFlex="30" fxFlex.lt-xl="30" fxFlex.lt-md="45" fxFlex.lt-sm="90" >
+            <app-visualiza-nft [nft]="nft"> </app-visualiza-nft>
+        </div>
+    </div>
+</div>

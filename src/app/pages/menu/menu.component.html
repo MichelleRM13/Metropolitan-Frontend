@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+    <div fxLayout="row wrap" fxFlex="100">
+        <div fxLayout="row wrap" fxLayoutAlign="start center" fxFlex="50">
+            <button *ngIf="loginUser" mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="irPagina(1)">
+                    <mat-icon>credit_card</mat-icon>
+                    <span>Recargas</span>
+                </button>
+                <button mat-menu-item (click)="irPagina(2)">
+                    <mat-icon>collections</mat-icon>
+                    <span>Mis NFTs</span>
+                </button>
+                <button mat-menu-item (click)="irPagina(3)">
+                    <mat-icon>directions_bus</mat-icon>
+                    <span>Rutas</span>
+                </button>
+            </mat-menu>
+            <span class="showTxtWeb" (click)="irPagina(0)">MetropolitanWeb</span>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="end center" fxFlex="50">
+            <button *ngIf="!loginUser" mat-button (click)="conectarMetamask()">
+                <img src="/assets/img/icoMetamask.png" alt="">
+                <span class="showTxtBtnMmsk">Conectarse con Metamask</span>
+            </button>
+            <button *ngIf="addressUserView" mat-button (click)="desconectarMetamask()" >
+                <img src="/assets/img/icoMetamask.png" alt="" >
+                <span class="showTxtBtnMmsk">Cerrar sesion</span>
+            </button>
+        </div>
+    </div>
+</mat-toolbar>

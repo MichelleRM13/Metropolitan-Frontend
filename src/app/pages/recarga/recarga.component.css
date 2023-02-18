@@ -1,0 +1,40 @@
+legend {
+    padding: 0.2em 0.5em;
+    color: #FFFFFF;
+    font-size: 90%;
+    text-align: left;
+    font-weight: normal;
+    min-width: 70px;
+    width: fit-content;
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    border: 0px solid #000000;
+}
+
+.legend-padding-top {
+    padding-top: 20px !important;
+}
+
+.leyendFieldSetBorderCorner2 {
+    background-color: #A7A9AC !important;
+    padding: 0.5em 1.5em;
+    color: #ffffff;
+    font-size: 90%;
+    text-align: left;
+    font-weight: normal;
+    min-width: 70px;
+    width: fit-content;
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+}
+
+fieldset {
+    border: 1px solid #dcdcdc;
+    background-color: #F9FAFA !important;
+    padding: 15px;
+    background-color: #EEEEEE;
+    border-color: #C8C8C8;
+    border-radius: 21px;
+  }

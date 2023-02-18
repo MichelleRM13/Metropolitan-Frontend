@@ -1,0 +1,67 @@
+<div fxLayout="row wrap" fxLayoutAlign="start start" style="width: 100%;" fxFlex="100">
+    <div style="margin-top: 3vh; margin-left: 3%;" fxFlex="45" fxFlex.lt-xl="45" fxFlex.lt-md="90" fxFlex.lt-sm="90">
+        <fieldset class="mat-elevation-z0" style="width: 100%; margin-bottom: 2vh;" fxLayout="column wrap">
+            <legend class="mat-elevation-z1 leyendFieldSetBorderCorner2">
+                Mi información
+            </legend>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" style="width: 100%;" fxFlex="100">
+                <div fxFlex="90" fxFlex.lt-xl="90" fxFlex.lt-md="50" fxFlex.lt-sm="50">
+                    <mat-form-field style="width: 100%;font-size: 20px;text-align: center;">
+                        <mat-label><strong>Saldo Actual de Metropolitan Tokens:</strong></mat-label>
+                        <input matInput disabled value="{{cantMTPTKN}}">
+                    </mat-form-field>
+                </div>
+
+                <div fxLayoutAlign="center center" fxFlex.lt-xl="90" fxFlex.lt-md="90" fxFlex.lt-sm="90" fxFlex="90">
+                    <img style="width: 45%;text-align: center;" src="/assets/img/qrcode.png" alt="Photo of a Shiba Inu">
+                </div>
+
+                <div fxLayoutAlign="center center" fxFlex.lt-xl="90" fxFlex.lt-md="90" fxFlex.lt-sm="90" fxFlex="90">
+                    <h1 style="width: 95%;font-size: 15px;text-align: center;color: rgba(0,0,0,.54);"><strong>{{addressActual}}</strong></h1>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div style="margin-top: 3vh; margin-left: 3%;" fxFlex="45" fxFlex.lt-xl="45" fxFlex.lt-md="90" fxFlex.lt-sm="90">
+        <fieldset class="mat-elevation-z0" style="width: 100%; margin-bottom: 2vh;" fxLayout="column wrap">
+            <legend class="mat-elevation-z1 leyendFieldSetBorderCorner2">
+                Nueva recarga
+            </legend>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" style="width: 100%;" fxFlex="100">
+                <form [formGroup]="recargaGroup" fxLayout="row wrap" fxLayoutAlign="center center">
+                    <div fxLayoutAlign="center center" fxFlex="90" fxFlex.lt-xl="90" fxFlex.lt-md="90" fxFlex.lt-sm="90">
+                        <mat-form-field style="width: 100%;font-size: 20px;text-align: center;margin-top: 20px;" floatLabel="always">
+                            <input matInput formControlName="penTokens">
+                            <mat-label><strong>Cant. Soles a Cambiar:</strong></mat-label>
+                        </mat-form-field>
+                    </div>
+
+                    <div fxLayout="row wrap" fxFlex.md="90" fxFlex.xl="90" fxFlex="90"  fxLayoutAlign="center center" 
+                        class="example-button-row" style="margin-bottom: 20px;margin-top: 10px;">
+                        <button mat-raised-button color="primary" (click)="cambiarTokens()" type="button">
+                            <mat-icon>credit_card</mat-icon>
+                            {{textButton}}
+                        </button>
+                    </div>
+
+
+                    <div fxLayoutAlign="center center" fxFlex.lt-xl="90" fxFlex.lt-md="90" fxFlex.lt-sm="90" fxFlex="90"
+                    style="word-break: break-word !important;">
+                        <h1 style="width: 95%;font-size: 12px;text-align: center;color: rgba(0,0,0,.54);word-break: break-word !important;">
+                            <strong>
+                                *Por la recarga de más de 50 soles reciba uno de los 100 NFTs Básicos de regalo y por la recarga de más de 100 soles reciba uno de los 18 NFTs Legendarios disponibles
+                            </strong>
+                        </h1>
+                    </div>
+                    <!-- <div fxLayoutAlign="center center" fxFlex="90" fxFlex.lt-xl="90" fxFlex.lt-md="90" fxFlex.lt-sm="90">
+                        <mat-form-field style="width: 100%;font-size: 20px;text-align: center;" floatLabel="always">
+                            <input (change)="cambiarTokens()" matInput formControlName="mtpknTokens" [disabled]='true'>
+                            <mat-label><strong>MTPTKN obtenidos:</strong></mat-label>
+                        </mat-form-field>
+                    </div> -->
+                </form>
+            </div>
+        </fieldset>
+    </div>
+</div>
